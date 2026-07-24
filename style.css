@@ -62,3 +62,204 @@ body {
   font-size: 14px;
   line-height: 1.5;
 }
+
+#excel {
+  background: #f3f3f3;
+  color: #222222;
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  font-size: 12px;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 100vh;
+}
+
+.excel-header {
+  background: #107c41;
+  color: #ffffff;
+}
+
+.excel-title-bar {
+  padding: 6px 16px;
+  font-size: 11px;
+  font-weight: 600;
+  background: #0b582e;
+}
+
+.excel-menu-tabs {
+  display: flex;
+  background: #107c41;
+  padding-left: 10px;
+}
+
+.excel-menu-tabs .tab {
+  padding: 8px 14px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #e1f3e8;
+}
+
+.excel-menu-tabs .tab.active {
+  background: #ffffff;
+  color: #107c41;
+  font-weight: 600;
+  border-radius: 4px 4px 0 0;
+}
+
+.excel-toolbar-action {
+  background: #f3f3f3;
+  color: #333333;
+  padding: 6px 16px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-bottom: 1px solid #d1d1d6;
+}
+
+.excel-toolbar-action button {
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 3px 8px;
+  font-size: 12px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.excel-toolbar-action button:hover {
+  background: #e1e1e1;
+}
+
+.separator {
+  color: #cccccc;
+}
+
+.excel-formula-bar {
+  display: flex;
+  background: #ffffff;
+  border-bottom: 1px solid #d1d1d6;
+  align-items: center;
+}
+
+.excel-formula-bar .cell-name {
+  width: 60px;
+  text-align: center;
+  font-weight: 600;
+  border-right: 1px solid #d1d1d6;
+  padding: 4px;
+  background: #f8f9fa;
+}
+
+.excel-formula-bar .fx {
+  padding: 4px 10px;
+  font-style: italic;
+  font-weight: bold;
+  color: #666666;
+  border-right: 1px solid #d1d1d6;
+}
+
+.formula-input {
+  flex: 1;
+  border: none;
+  padding: 4px 10px;
+  font-family: "SF Mono", Consolas, monospace;
+  font-size: 12px;
+  outline: none;
+}
+
+.excel-grid-container {
+  flex: 1;
+  overflow: auto;
+  background: #ffffff;
+}
+
+.excel-table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.excel-table th, .excel-table td {
+  border: 1px solid #e1e1e1;
+  padding: 6px 10px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.excel-table th {
+  background: #f8f9fa;
+  color: #555555;
+  text-align: center;
+  font-weight: 600;
+  border-color: #d1d1d6;
+}
+
+.excel-table .row-header {
+  background: #f8f9fa;
+  color: #555555;
+  text-align: center;
+  font-weight: 600;
+  width: 40px;
+  border-color: #d1d1d6;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.selected-cell-row td {
+  background: #e8f2ea;
+}
+
+.total-row td {
+  background: #f2f2f2;
+  border-top: 2px solid #107c41;
+}
+
+.status-ok { color: #107c41; font-weight: 600; }
+.status-low { color: #d97706; font-weight: 600; }
+.status-out { color: #dc2626; font-weight: 600; }
+
+.excel-footer {
+  background: #f3f3f3;
+  border-top: 1px solid #d1d1d6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  height: 28px;
+}
+
+.sheets-bar {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.sheet-btn {
+  padding: 3px 12px;
+  background: #e1e1e1;
+  border-radius: 3px 3px 0 0;
+  font-size: 11px;
+}
+
+.sheet-btn.active {
+  background: #ffffff;
+  font-weight: 600;
+  color: #107c41;
+  border-top: 2px solid #107c41;
+}
+
+.add-sheet {
+  padding: 0 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.status-bar-info {
+  font-size: 11px;
+  color: #666666;
+  display: flex;
+  gap: 15px;
+}
