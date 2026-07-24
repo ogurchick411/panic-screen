@@ -1,11 +1,21 @@
 const { app, BrowserWindow } = require('electron');
 
-app.whenReady().then(() => {
-  console.log('App ready');
-});
+let win;
 
-const { app } = require('electron');
+function createWindow() {
+  win = new BrowserWindow({
+    width: 800,
+    height: 600,
+    show: false,
+    frame: false,
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false
+    }
+  });
+}
 
 app.whenReady().then(() => {
   if (process.platform === 'darwin') app.dock.hide();
+  createWindow();
 });
