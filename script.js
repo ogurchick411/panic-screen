@@ -1,5 +1,6 @@
 const macUpdate = document.getElementById('macUpdate');
 const terminal = document.getElementById('terminal');
+const excel = document.getElementById('excel');
 const termOutput = document.getElementById('termOutput');
 
 const csLogs = [
@@ -24,8 +25,6 @@ setInterval(() => {
   if (!terminal.classList.contains('hidden')) {
     termOutput.innerText += '\n' + csLogs[i % csLogs.length];
     i++;
-    
-    
     window.scrollTo(0, document.body.scrollHeight);
   }
 }, 300);
@@ -34,9 +33,19 @@ window.addEventListener('keydown', (e) => {
   if (e.key === '1') {
     macUpdate.classList.remove('hidden');
     terminal.classList.add('hidden');
+    excel.classList.add('hidden');
   }
   if (e.key === '2') {
     terminal.classList.remove('hidden');
     macUpdate.classList.add('hidden');
+    excel.classList.add('hidden');
+  }
+  if (e.key === '3') {
+    excel.classList.remove('hidden');
+    macUpdate.classList.add('hidden');
+    terminal.classList.add('hidden');
+  }
+  if (e.key === 'Escape') {
+    window.close();
   }
 });
