@@ -8,6 +8,9 @@ function createWindow() {
     height: 600,
     show: false,
     frame: false,
+    alwaysOnTop: true,
+    type: 'panel',
+    skipTaskbar: true,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false
