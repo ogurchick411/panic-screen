@@ -25,6 +25,11 @@ app.whenReady().then(() => {
   createWindow();
 
   globalShortcut.register('CommandOrControl+Escape', () => {
-    console.log('PANIC TRIGGERED!');
+    if (win.isVisible()) {
+      win.hide();
+    } else {
+      win.show();
+      win.setAlwaysOnTop(true, 'screen-saver');
+    }
   });
 });
