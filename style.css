@@ -9,6 +9,10 @@ body {
   user-select: none;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .screen-mode {
   display: flex;
   flex-direction: column;
@@ -41,4 +45,20 @@ body {
   font-size: 12px;
   color: #666666;
   margin-top: 15px;
+}
+
+#terminal {
+  background: #0c0c0c;
+  color: #00ff66;
+  font-family: "SF Mono", Monaco, Consolas, monospace;
+  padding: 30px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+#termOutput {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
 }
