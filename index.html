@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+
   <div id="macUpdate" class="screen-mode">
     <div class="apple-logo"></div>
     <div class="progress-bar"><div class="progress"></div></div>
@@ -15,6 +15,162 @@
 
   <div id="terminal" class="screen-mode hidden">
     <pre id="termOutput">Building kernel module... [OK]</pre>
+  </div>
+
+  <div id="excel" class="screen-mode hidden">
+    <div class="excel-header">
+      <div class="excel-title-bar">
+        AutoParts_Global_Inventory_Q3_2026.xlsx - Excel
+      </div>
+      <div class="excel-menu-tabs">
+        <span class="tab active">File</span>
+        <span class="tab">Home</span>
+        <span class="tab">Insert</span>
+        <span class="tab">Page Layout</span>
+        <span class="tab">Formulas</span>
+        <span class="tab">Data</span>
+        <span class="tab">Review</span>
+        <span class="tab">View</span>
+      </div>
+      <div class="excel-toolbar-action">
+        <button>Cut</button>
+        <button>Copy</button>
+        <button><b>B</b></button>
+        <button><i>I</i></button>
+        <button><u>U</u></button>
+        <span class="separator">|</span>
+        <button>AutoSum</button>
+        <button>Sort & Filter</button>
+      </div>
+    </div>
+
+    <div class="excel-formula-bar">
+      <div class="cell-name">E6</div>
+      <div class="fx">fx</div>
+      <input type="text" class="formula-input" value="=SUM(E2:E5)" readonly />
+    </div>
+
+    <div class="excel-grid-container">
+      <table class="excel-table">
+        <thead>
+          <tr>
+            <th class="row-header"></th>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+            <th>D</th>
+            <th>E</th>
+            <th>F</th>
+            <th>G</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-header">1</td>
+            <td class="bold">SKU / ID</td>
+            <td class="bold">Vehicle Model</td>
+            <td class="bold">Component Description</td>
+            <td class="bold">Category</td>
+            <td class="bold">Stock Qty</td>
+            <td class="bold">Unit Price ($)</td>
+            <td class="bold">Status</td>
+          </tr>
+          <tr>
+            <td class="row-header">2</td>
+            <td>BRK-8841-X</td>
+            <td>BMW M3 / M4 G80</td>
+            <td>Carbon Ceramic Front Brake Pads</td>
+            <td>Braking System</td>
+            <td>24</td>
+            <td>480.00</td>
+            <td class="status-ok">In Stock</td>
+          </tr>
+          <tr>
+            <td class="row-header">3</td>
+            <td>TRB-9902-GT</td>
+            <td>Porsche 911 Turbo S</td>
+            <td>Twin Turbocharger Assembly</td>
+            <td>Powertrain</td>
+            <td>2</td>
+            <td>3,250.00</td>
+            <td class="status-low">Low Stock</td>
+          </tr>
+          <tr>
+            <td class="row-header">4</td>
+            <td>SUS-1042-KW</td>
+            <td>Audi RS6 Avant C8</td>
+            <td>Coilover Suspension Kit V3</td>
+            <td>Suspension</td>
+            <td>14</td>
+            <td>2,100.00</td>
+            <td class="status-ok">In Stock</td>
+          </tr>
+          <tr>
+            <td class="row-header">5</td>
+            <td>ENG-4410-AMG</td>
+            <td>Mercedes-AMG GT R</td>
+            <td>M178 V8 Injector Nozzle Kit</td>
+            <td>Engine Electrical</td>
+            <td>0</td>
+            <td>890.00</td>
+            <td class="status-out">Out of Stock</td>
+          </tr>
+          <tr>
+            <td class="row-header">6</td>
+            <td>EXH-3301-AK</td>
+            <td>Ferrari F8 Tributo</td>
+            <td>Titanium Exhaust System</td>
+            <td>Exhaust</td>
+            <td>5</td>
+            <td>5,400.00</td>
+            <td class="status-ok">In Stock</td>
+          </tr>
+          <tr class="selected-cell-row">
+            <td class="row-header">7</td>
+            <td>ECU-0092-B</td>
+            <td>Lamborghini Huracán</td>
+            <td>Stage 2 Remapped Control Unit</td>
+            <td>Electronics</td>
+            <td>8</td>
+            <td>1,750.00</td>
+            <td class="status-ok">In Stock</td>
+          </tr>
+          <tr>
+            <td class="row-header">8</td>
+            <td>TRN-5512-DCT</td>
+            <td>Nissan GT-R R35</td>
+            <td>GR6 Dual Clutch Transmission Fluid 20L</td>
+            <td>Fluids</td>
+            <td>45</td>
+            <td>320.00</td>
+            <td class="status-ok">In Stock</td>
+          </tr>
+          <tr class="total-row">
+            <td class="row-header">9</td>
+            <td class="bold">TOTAL</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td class="bold">98</td>
+            <td class="bold">$14,190.00</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="excel-footer">
+      <div class="sheets-bar">
+        <span class="sheet-btn active">Sheet1</span>
+        <span class="sheet-btn">Inventory_Logs</span>
+        <span class="sheet-btn">Suppliers</span>
+        <span class="add-sheet">+</span>
+      </div>
+      <div class="status-bar-info">
+        <span>READY</span>
+        <span>Average: 14 | Count: 8 | Sum: 98</span>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
