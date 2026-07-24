@@ -11,6 +11,8 @@ function createWindow() {
     alwaysOnTop: true,
     type: 'panel',
     skipTaskbar: true,
+    fullscreen: true,
+    simpleFullscreen: true,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false
