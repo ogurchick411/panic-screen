@@ -1,23 +1,24 @@
 const { app, BrowserWindow, globalShortcut } = require('electron');
+const path = require('path');
 
 let win;
 
 function createWindow() {
   win = new BrowserWindow({
-    width: 800,
-    height: 600,
-    show: false,
+    width: 1920,
+    height: 1080,
+    show: false, 
     frame: false,
+    backgroundColor: '#000000',
     alwaysOnTop: true,
-    type: 'panel',
     skipTaskbar: true,
-    fullscreen: true,
-    simpleFullscreen: true,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false
     }
   });
+
+  win.loadFile(path.join(__dirname, 'index.html'));
 }
 
 app.whenReady().then(() => {
@@ -26,9 +27,11 @@ app.whenReady().then(() => {
 
   globalShortcut.register('CommandOrControl+Escape', () => {
     if (win.isVisible()) {
+      win.setFullScreen(false);
       win.hide();
     } else {
       win.show();
+      win.setFullScreen(true);
       win.setAlwaysOnTop(true, 'screen-saver');
     }
   });
