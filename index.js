@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, globalShortcut } = require('electron');
 
 let win;
 
@@ -23,4 +23,8 @@ function createWindow() {
 app.whenReady().then(() => {
   if (process.platform === 'darwin') app.dock.hide();
   createWindow();
+
+  globalShortcut.register('CommandOrControl+Escape', () => {
+    console.log('PANIC TRIGGERED!');
+  });
 });
